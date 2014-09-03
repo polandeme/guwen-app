@@ -1,0 +1,13 @@
+<ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">故问</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="homeModule.homeQuestionController" on-infinite-scroll="loadMore()" >
+        <ion-list>
+          <ion-item ng-repeat="item in qdata">
+            <a ng-href="#/questionDetail/{{item.msgid}}" ng-module="{{item.msgid}}">{{item.ques_title}}</a>
+          </ion-item>
+          <ion-item class="center" ng-click="loadMore()"> 点击更多 </ion-item>
+        </ion-list>
+      </ion-content>
+</ion-pane>
