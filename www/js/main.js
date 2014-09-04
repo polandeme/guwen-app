@@ -1,6 +1,7 @@
 /*
     File: main.js
     Author: Jonathan Rowny
+    <j></j>
     Description: Loads up all the things you need to make a fun app with Angular, Ionic, and Cordova
 */
 require.config({

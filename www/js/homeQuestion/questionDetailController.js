@@ -3,5 +3,7 @@ define(function () {
 		
 		homeQuestionService.getQuestionDetail();
 		$scope.qdetailData = homeQuestionService.qdetailData;
+		$scope.qanswerData = homeQuestionService.qanswerData;
+		// qanswerData
 	}
 })

@@ -1,0 +1,24 @@
+<ion-view title="提问">
+	<ion-content ng-controller="homeModule.askQuestionController">
+		<ion-list>
+
+			<label class="item item-input item-floating-label">
+		    	<span class="input-label">问题</span>
+		    	<input type="text" ng-model="qdetailData.title" placeholder="tilte">
+		  	</label>
+		  	<label class="item item-input item-floating-label">
+		    	<span class="input-label">问题描述</span>
+		    	<textarea ng-model="qdetailData.content" placeholder="添加问题描述" ></textarea>
+		  	</label>
+		  	<label class="item item-input item-floating-label">
+		    	<span class="input-label">悬赏积分</span>
+		    	<input type="text" ng-model="qdetailData.score" placeholder="Email">
+		  	</label>
+
+		  	<select >
+		  		<option ng-repeat="cate in "> {{ }}</option>
+    		</select>
+			<button class="btn default" ng-click="submit()"> 确认</button>
+		</ion-list>
+	</ion-content>
+</ion-view>

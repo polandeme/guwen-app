@@ -19,9 +19,13 @@ define(['./app'], function (app) {
 			.state('login', {
 				url: '/user/login',
 				templateUrl: 'views/user/login.html'
+			})
+			.state('askquestion', {
+				url: '/ask',
+				templateUrl: 'views/question/askquestion.html'
 			});
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/ask');
 
 	})
 })
