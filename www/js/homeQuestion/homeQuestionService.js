@@ -1,7 +1,7 @@
 define(function () {
 	var homeQuestionService = function($http, $ionicLoading, $q, $stateParams ) {
-		// var HOST = 'http://guwen.stuzone.com/index.php/';
-		var HOST = 'http://59.68.29.91/guwen/index.php/';
+		var HOST = 'http://guwen.stuzone.com/index.php/';
+		// var HOST = 'http://59.68.29.91/guwen/index.php/';
 		
 		var o = {
 			qdata: [],

@@ -25,7 +25,7 @@ define(['./app'], function (app) {
 				templateUrl: 'views/question/askquestion.html'
 			});
 
-            $urlRouterProvider.otherwise('/ask');
+            $urlRouterProvider.otherwise('/home');
 
 	})
 })
