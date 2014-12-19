@@ -1,6 +1,8 @@
 define(function () {
 	var userService = function ($http, $location) {
-		var HOST = 'http://192.168.1.103/guwen/index.php/';
+		// var HOST = 'http://192.168.1.103/guwen/index.php/';
+		var HOST = 'http://guwen.stuzone.com/index.php/';
+		
 		var o = {
 			profile: {
 				username: '',
@@ -16,6 +18,7 @@ define(function () {
 				$http.post(url, data)
 					 .success(function(data) {
 					 	if(data.status === 1) {
+					 		window.location.href = "#/menu/ask"
 					 		console.log('success');
 					 	}
 					 })

@@ -3,29 +3,51 @@ define(['./app'], function (app) {
 	return app.config(function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
 
+			//side menu
+			.state('menu', {
+				url: '/menu',
+				abstract: true,
+				templateUrl: 'views/sideMenu.html',
+			})
 			//home page
-			.state('home', {
+			.state('menu.home', {
 				url: '/home',
-				templateUrl: 'views/home.html'
+				views: {
+					'menuContent': {
+				        templateUrl: 'views/home.html'
+				     }
+			  	}
 			})
 
 			//question detail
-			.state('questionDetail', {
-				url: '/questionDetail/:id',
-				templateUrl: 'views/questionDeatil.html'
+			.state('menu.questionDetail', {
+				url: '/home/questionDetail/:id',
+				views: {
+					'menuContent': {
+				        templateUrl: 'views/questionDeatil.html'
+				     }
+			  	}
 			})
 
 			//user login
-			.state('login', {
-				url: '/user/login',
-				templateUrl: 'views/user/login.html'
+			.state('menu.login', {
+				url: '/login',
+				views: {
+					'menuContent': {
+				        templateUrl: 'views/user/login.html'
+				     }
+			  	}
 			})
-			.state('askquestion', {
+			//ask question
+			.state('menu.askquestion', {
 				url: '/ask',
-				templateUrl: 'views/question/askquestion.html'
+				views: {
+					'menuContent': {
+				        templateUrl: 'views/question/askquestion.html'
+				     }
+			  	}
 			});
 
-            $urlRouterProvider.otherwise('/home');
-
+            $urlRouterProvider.otherwise('/menu/home');
 	})
 })
